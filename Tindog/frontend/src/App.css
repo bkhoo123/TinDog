@@ -1,0 +1,128 @@
+
+
+h3 {
+    margin-top: 5%;
+    font-family: 'Montserrat';
+    font-size: 30px;
+}
+
+p {
+    color: #8f8f8f
+}
+
+em {
+    padding-left: 2%;
+}
+
+.contain {
+    padding: 3%
+}
+
+.tin {
+    font-family: Montserrat;
+}
+
+.titlebuttons {
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+    width: 3fr;
+}
+
+.feature1 {
+    text-align: center;
+}
+
+.feature2 {
+    text-align: center;
+}
+
+
+
+.feature3 {
+    text-align: center;
+}
+
+.fas {
+    color: #ef8172
+}
+
+.fas:hover {
+    color: #ff4c68
+}
+
+#dog-api{
+    width: 30vw;
+    height: 30vh;
+}
+
+#title {
+    background-color: #ff4c68;
+    width: 100%;
+}
+
+#features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-top: 2%;
+    padding: 7% 10%
+}
+
+#testimonials {
+    padding: 7% 15%;
+    text-align: center;
+    background-color: #ef8172;
+    color: white;
+}
+
+#testy {
+    color: black;
+    margin-right: 7%;
+}
+
+#press {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 5% 10%;
+    gap: 2%;
+}
+
+.testimonialimage {
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vh;
+    padding-top: 5px;
+}
+
+.press-logo {
+    width: 15%;
+}
+
+
+
+#price-title {
+    font-family: 'Montserrat'
+}
+
+
+
+
+
+#cta {
+    text-align: center;
+    
+}
+
+#footer {
+    text-align: center;
+    padding-top: 1%;
+}
+
+#calltoaction {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
