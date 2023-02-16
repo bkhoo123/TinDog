@@ -1,7 +1,6 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const {Model} = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Dog extends Model {
     /**
@@ -15,13 +14,33 @@ module.exports = (sequelize, DataTypes) => {
         models.User,
         {foreignKey: 'ownerId'}
       )
+      Dog.hasMany(
+        models.Match,
+        {foreignKey: 'dogId1'}
+      )
+      Dog.hasMany(
+        models.Match,
+        {foreignKey: 'dogId2'}
+      )
     }
   }
   Dog.init({
-    ownerId: DataTypes.INTEGER,
-    dogName: DataTypes.STRING,
-    breed: DataTypes.STRING,
-    url: DataTypes.STRING
+    ownerId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    dogName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    url: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   }, {
     sequelize,
     modelName: 'Dog',

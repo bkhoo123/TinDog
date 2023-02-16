@@ -1,18 +1,31 @@
 const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
+const dogsRouter = require('./dogs.js')
+const matchesRouter = require('./matches.js')
+const messagesRouter = require('./messages.js')
+const subscriptionsRouter = require('./subscriptions.js')
+const subscriptionPlansRouter = require('./subscriptionplans.js')
+
 const { restoreUser } = require("../../utils/auth.js");
 
-router.get("/api/csrf/restore", (req, res) => {
-    const csrfToken = req.csrfToken();
-    res.cookie("XSRF-TOKEN", csrfToken);
-    res.status(200).json({
-      'XSRF-Token': csrfToken
-    });
+router.get("/csrf/restore", (req, res) => {
+  const csrfToken = req.csrfToken();
+  res.cookie("XSRF-TOKEN", csrfToken);
+  res.status(200).json({
+    message: "Successfully got token",
+    'XSRF-Token': csrfToken
+  });
 });
 
 router.use(restoreUser)
 router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
+router.use('/dogs', dogsRouter)
+router.use('/matches', matchesRouter)
+router.use('/messages', messagesRouter)
+router.use('/subscriptions', subscriptionsRouter)
+router.use('/subscriptionplans', subscriptionPlansRouter)
+
 
 module.exports = router;

@@ -23,11 +23,10 @@ const { Op } = require("sequelize")
 
 
 
-//! Log in
+//* Log in
 router.post('/', async (req, res, next) => {
       const { credential, password } = req.body;
 
-      //! This feature isn't confirmed on Render yet
       //? Confirmed on Postman
       if (!credential) {
         res.status(400)
@@ -39,9 +38,7 @@ router.post('/', async (req, res, next) => {
           }
         })
       }
-      
-      //! This feature isn't confirmed on Render yet
-      //? Confirmed on Postman
+
       if (!password) {
         res.status(400)
         return res.json({
@@ -86,7 +83,7 @@ router.post('/', async (req, res, next) => {
 
 
 
-//! Restore session user
+//* Restore session user
 router.get('/', restoreUser, (req, res, next) => {
   const { user } = req;
   if (user) {
@@ -99,21 +96,19 @@ router.get('/', restoreUser, (req, res, next) => {
   }
 });
 
-//! Get the Current User
+//* Get the Current User
 router.get('/', requireAuth, async (req, res, next) => {
   let currentUser = req.user
   return res.json(currentUser)
 })
 
-//! Logout
-//? Confirmed Functioning on Render 
+//* Logout
+
 router.delete('/', (_req, res) => {
     res.clearCookie('token');
     return res.json({ message: 'success' });
   }
 );
   
-
-
 
 module.exports = router;

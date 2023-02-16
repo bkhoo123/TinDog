@@ -1,7 +1,8 @@
 const express = require('express');
+const {User, Match, Message, Subscription, SubscriptionPlan, Dog} = require('../../db/models')
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User } = require('../../db/models');
+
 
 const router = express.Router();
 
@@ -150,5 +151,8 @@ router.post('/', async (req, res) => {
     });
   } 
 );
+
+
+
 
 module.exports = router;

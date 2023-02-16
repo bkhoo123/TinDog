@@ -49,18 +49,22 @@ module.exports = (sequelize, DataTypes) => {
 
     static associate(models) {
       // define association here
-      // User.hasMany(
-      //   models.Message,
-      //   {foreignKey: 'sender_id'}
-      // )
-      // User.hasMany(
-      //   models.Message,
-      //   {foreignKey: 'recipient_id'}
-      // )
-      // User.hasMany(
-      //   models.Dog,
-      //   {foreignKey: 'owner_id'}
-      // )
+      User.hasMany(
+        models.Message,
+        {foreignKey: 'senderId'}
+      )
+      User.hasMany(
+        models.Message,
+        {foreignKey: 'recipientId'}
+      )
+      User.hasMany(
+        models.Dog,
+        {foreignKey: 'ownerId'}
+      )
+      User.hasOne(
+        models.Subscription,
+        {foreignKey: 'userId'}
+      )
     }
   };
 
