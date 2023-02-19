@@ -1,0 +1,32 @@
+.dog-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+.all-dogs{
+    height: 200px;
+    width: 300px;
+    border-radius: 4%
+}
+
+.dog-circle {
+    border-radius: 45%;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.dog-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heart-button {
+    border-radius: 50%;
+}

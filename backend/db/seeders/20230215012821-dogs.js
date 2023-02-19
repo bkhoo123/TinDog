@@ -5,8 +5,7 @@ if (process.env.NODE_ENV === 'production') {
   options.schema = process.env.SCHEMA;  // define your schema in options object
 }
 
-const names = "Abraham,Rocco,Aryan,Phillip,Neil,Rodney,Jordon,Anne,Abbey,Turner,Bryant,Adrienne,Lillian,Emiliano,Alanna,Mariana,Santos,Lucille,Gillian,Kyla,Sage,Paityn,Keegan,Stephen,Esteban,Titus,Angel,Madeline,Lukas,Lucian,Sidney,Amiyah,Kadyn,Bryce,Aracely,Marlene,Vincent,Ulises,Cohen,Leonel,Baylee,Derek,Danny,Travis,Raegan,Jeffery,Shane,Josephine,Adyson,Nathen"
-const split = names.split(",")
+
 
 
 /** @type {import('sequelize-cli').Migration} */
@@ -27,25 +26,29 @@ module.exports = {
       ownerId: 1,
       dogName: 'PaintJob',
       breed: 'beagle',
-      url: "https://images.dog.ceo/breeds/beagle/n02088364_16065.jpg"
+      url: "https://images.dog.ceo/breeds/beagle/n02088364_16065.jpg",
+      description: "I am the best dog licker in the world no one can lick as much as me"
     },
     {
       ownerId: 1,
       dogName: 'MinSoe',
       breed: 'terrier-bedlington',
-      url: "https://images.dog.ceo/breeds/terrier-bedlington/n02093647_1129.jpg"
+      url: "https://images.dog.ceo/breeds/terrier-bedlington/n02093647_1129.jpg",
+      description: "My owner always makes me smell good so I smell good too"
     },
     {
       ownerId: 2,
       dogName: 'ChrisdaLaw',
       breed: 'brabancon',
-      url: "https://images.dog.ceo/breeds/brabancon/n02112706_793.jpg"
+      url: "https://images.dog.ceo/breeds/brabancon/n02112706_793.jpg",
+      description: "Looking to marry Simon's Dog"
     },
     {
       ownerId: 2,
       dogName: 'Mochi',
       breed: 'corgi-cardigan',
-      url: "https://images.dog.ceo/breeds/corgi-cardigan/n02113186_5242.jpg"
+      url: "https://images.dog.ceo/breeds/corgi-cardigan/n02113186_5242.jpg",
+      description: "I actually want to marry a cat I don't know why I'm here"
     }
    ], {})
   },
