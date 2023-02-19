@@ -6,6 +6,7 @@ const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 const { requireAuth } = require('../../utils/auth')
 const {Op} = require("sequelize")
+require('dotenv').config()
 
 //! OpenAI
 const { Configuration, OpenAIApi } = require("openai");
@@ -58,7 +59,7 @@ router.get('/', async (req, res, next) => {
 //* Endpoint for Chat GPT to user
 router.post('/gpt', async (req, res, next) => {
     const chatBotId = 1
-    const userId = req.user.id
+    const userId = 1
     try {
         const userMessage = req.body.message
 
@@ -87,8 +88,7 @@ router.post('/gpt', async (req, res, next) => {
 
         return res.json({
             botResponse,
-            userId,
-            chatBotId
+
         })
     } catch (err) {
         console.error(err)
