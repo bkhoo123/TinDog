@@ -7,7 +7,7 @@ import './chat.css'
 
 import { csrfFetch } from '../../store/csrf';
 
-const apiKey = "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"
+
 
 function ChatWidget() {
   const [messages, setMessages] = useState([]);
