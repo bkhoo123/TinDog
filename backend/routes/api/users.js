@@ -1,5 +1,5 @@
 const express = require('express');
-const {User, Match, Message, Subscription, SubscriptionPlan, Dog} = require('../../db/models')
+const {User, Match, Message, Dog} = require('../../db/models')
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 

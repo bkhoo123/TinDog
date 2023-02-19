@@ -61,10 +61,6 @@ module.exports = (sequelize, DataTypes) => {
         models.Dog,
         {foreignKey: 'ownerId'}
       )
-      User.hasOne(
-        models.Subscription,
-        {foreignKey: 'userId'}
-      )
     }
   };
 

@@ -1,5 +1,5 @@
 const express = require('express');
-const {User, Match, Message, Subscription, SubscriptionPlan, Dog, ChatMessage, ChatBot} = require('../../db/models')
+const {User, Match, Message, Dog, ChatMessage, ChatBot} = require('../../db/models')
 const bodyParser = require('body-parser');
 const router = express.Router();
 const { check } = require('express-validator');
