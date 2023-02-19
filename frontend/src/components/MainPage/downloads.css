@@ -1,0 +1,31 @@
+.downloads {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: start;
+    height: 100vh;
+    gap: 15px;
+    
+}
+
+/* https://static.independent.co.uk/2021/11/16/16/newFile-10.jpg?quality=75&width=982&height=726&auto=webp */
+
+.download-container {
+     background-image: url("https://images.unsplash.com/photo-1499796683658-b659bc751db1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80");
+}
+
+.dog-text {
+    color: black;
+    font-weight: bold;
+    font-family: 'montserrat';
+    
+}
+
+.download-appbutton {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 20vh;
+    gap: 10px
+}
