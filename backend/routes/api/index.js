@@ -6,6 +6,7 @@ const matchesRouter = require('./matches.js')
 const messagesRouter = require('./messages.js')
 const subscriptionsRouter = require('./subscriptions.js')
 const subscriptionPlansRouter = require('./subscriptionplans.js')
+const chatsRouter = require('./chats.js')
 
 const { restoreUser } = require("../../utils/auth.js");
 
@@ -26,6 +27,7 @@ router.use('/matches', matchesRouter)
 router.use('/messages', messagesRouter)
 router.use('/subscriptions', subscriptionsRouter)
 router.use('/subscriptionplans', subscriptionPlansRouter)
+router.use('/chats', chatsRouter)
 
 
 module.exports = router;

@@ -3,18 +3,17 @@ import dogImage from './dog-img.jpg'
 import Carousel from 'react-bootstrap/Carousel';
 import ladyImage from './lady-img.jpg'
 import Button from 'react-bootstrap/Button';
-
 import TechCrunch from './TechCrunch.png'
 import TNW from './tnw.png'
 import Insider from './bizinsider.png'
 import Mash from './mashable.png'
 import Container from 'react-bootstrap/Container';
-import axios from 'axios'
-import {useState, useEffect} from 'react'
 import Title from '../Title';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function MainPage() {
+  const navigate = useNavigate()
   return (
     <>
     
@@ -57,10 +56,8 @@ export default function MainPage() {
         </Carousel.Item>
       </Carousel>
     </section>
-
-
+    
     <section id="press">
-      
         <img class="press-logo" src={TechCrunch} alt="" />
         <img class="press-logo" src={TNW} alt="" />
         <img class="press-logo" src={Insider} alt="" />
@@ -74,8 +71,8 @@ export default function MainPage() {
     <section id="cta">
       <h3>Find the True Love of Your Dog's Life Today</h3>
       <div id="calltoaction">
-      <Button variant="dark btn"><i class="fa-brands fa-apple"></i> Download</Button>
-      <Button variant="outline-primary"><i class="fa-brands fa-google-play"></i> Download</Button>
+      <Button onClick={() => navigate('/download')}  variant="dark btn"><i class="fa-brands fa-apple"></i> Download</Button>
+      <Button onClick={() => navigate('/download')}  variant="outline-primary"><i class="fa-brands fa-google-play"></i> Download</Button>
       </div>
     </section>
 
